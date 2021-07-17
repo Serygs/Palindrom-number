@@ -1,0 +1,19 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+        int temp = x;
+		int count = 0, RevX=0;
+        if(x<0){
+            return false;
+        }
+		for (; x != 0; x /= 10, ++count) {
+			int digit = x % 10;
+			RevX = RevX * 10 + digit;
+		}
+		if (temp == RevX) {
+			return true;
+		} else {
+			return false;
+		}
+        
+    }
+}
