@@ -1,0 +1,14 @@
+class Solution {
+    public int mySqrt(int x) {
+    double n = 1; 
+    double res=1; 
+	while(true) {
+		if(res == 25) {
+			return (int) n; 
+    	}
+        n = n - (( (n*n)- x) / (2*n)); // Newton's method
+    	res+=1;
+    }
+        
+    }
+}
